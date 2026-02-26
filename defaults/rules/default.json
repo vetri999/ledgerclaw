@@ -1,0 +1,169 @@
+{
+  "version": 1,
+
+  "senders": {
+    "financial": [
+      "*@hdfcbank.net",
+      "*@hdfcbank.com",
+      "*@icicibank.com",
+      "*@icicibank.co.in",
+      "*@axisbank.com",
+      "*@sbi.co.in",
+      "*@onlinesbi.com",
+      "*@kotak.com",
+      "*@kotakbank.com",
+      "*@indusind.com",
+      "*@yesbank.in",
+      "*@idfcfirstbank.com",
+      "*@rbl.co.in",
+      "*@federalbank.co.in",
+      "*@bandhanbank.com",
+      "*@cred.club",
+      "*@paytm.com",
+      "*@phonepe.com",
+      "*@razorpay.com",
+      "*@gpay.google.com",
+      "*@zerodha.com",
+      "*@kite.zerodha.com",
+      "*@groww.in",
+      "*@kfintech.com",
+      "*@camsonline.com",
+      "*@motilaloswal.com",
+      "*@angelone.in",
+      "*@licindia.in",
+      "*@policybazaar.com",
+      "*@maxlifeinsurance.com",
+      "*@hdfclife.com",
+      "*@iciciprulife.com",
+      "*@incometax.gov.in",
+      "*@cleartax.in",
+      "*@bajajfinserv.in",
+      "*@tatacapital.com",
+      "*@chase.com",
+      "*@bankofamerica.com",
+      "*@wellsfargo.com",
+      "*@citi.com",
+      "*@citibank.com",
+      "*@americanexpress.com",
+      "*@discover.com",
+      "*@capitalone.com",
+      "*@paypal.com",
+      "*@venmo.com",
+      "*@robinhood.com",
+      "*@vanguard.com",
+      "*@fidelity.com",
+      "*@schwab.com",
+      "*@etrade.com",
+      "*@turbotax.intuit.com",
+      "*@irs.gov",
+      "*@mint.intuit.com"
+    ],
+    "ignore": [
+      "*@marketing.hdfcbank.net",
+      "*@promotions.icicibank.com",
+      "*@offers.axisbank.com",
+      "*@deals.cred.club",
+      "*@offers.kotak.com",
+      "*@marketing.chase.com",
+      "*@offers.capitalone.com",
+      "*@promotions.bankofamerica.com"
+    ]
+  },
+
+  "keywords": {
+    "subject": [
+      "credit card",
+      "debit card",
+      "statement",
+      "bill payment",
+      "payment due",
+      "amount due",
+      "minimum due",
+      "transaction alert",
+      "transaction successful",
+      "transaction failed",
+      "EMI",
+      "loan",
+      "disbursement",
+      "repayment",
+      "mutual fund",
+      "SIP",
+      "NAV",
+      "folio",
+      "insurance premium",
+      "policy renewal",
+      "salary credited",
+      "salary credit",
+      "income tax",
+      "ITR",
+      "TDS",
+      "form 16",
+      "26AS",
+      "bank statement",
+      "account statement",
+      "UPI",
+      "NEFT",
+      "RTGS",
+      "IMPS",
+      "fixed deposit",
+      "recurring deposit",
+      "dividend",
+      "capital gains",
+      "KYC",
+      "auto-debit",
+      "auto debit",
+      "mandate",
+      "NACH"
+    ],
+    "body": [
+      "INR",
+      "₹",
+      "$",
+      "credited",
+      "debited",
+      "balance",
+      "due date",
+      "payment",
+      "transaction",
+      "account number",
+      "card ending",
+      "available limit",
+      "outstanding"
+    ]
+  },
+
+  "categories": {
+    "credit_card": {
+      "senderHints": ["credit", "card", "amex", "americanexpress", "discover"],
+      "keywordHints": ["credit card", "card ending", "statement", "minimum due", "reward points", "available limit"]
+    },
+    "bank_alert": {
+      "senderHints": ["bank", "sbi", "hdfc", "icici", "axis", "kotak", "chase", "wells", "citi"],
+      "keywordHints": ["transaction alert", "credited", "debited", "UPI", "NEFT", "IMPS", "RTGS", "auto-debit"]
+    },
+    "loan": {
+      "senderHints": ["loan", "lending", "bajajfinserv", "tatacapital"],
+      "keywordHints": ["EMI", "loan", "disbursement", "repayment", "principal", "interest", "NACH"]
+    },
+    "investment": {
+      "senderHints": ["zerodha", "groww", "kfintech", "camsonline", "vanguard", "fidelity", "robinhood", "schwab", "angelone", "motilaloswal"],
+      "keywordHints": ["mutual fund", "SIP", "NAV", "folio", "dividend", "portfolio", "capital gains", "contract note"]
+    },
+    "insurance": {
+      "senderHints": ["insurance", "lic", "policybazaar", "maxlife", "hdfclife", "icicipru"],
+      "keywordHints": ["insurance", "premium", "policy renewal", "claim", "coverage", "sum assured"]
+    },
+    "tax": {
+      "senderHints": ["incometax", "cleartax", "tax", "irs", "turbotax"],
+      "keywordHints": ["income tax", "ITR", "TDS", "form 16", "26AS", "tax return", "refund", "advance tax"]
+    },
+    "salary": {
+      "senderHints": [],
+      "keywordHints": ["salary credited", "salary credit", "payslip", "pay stub", "net pay"]
+    },
+    "payment_app": {
+      "senderHints": ["paytm", "phonepe", "gpay", "razorpay", "paypal", "venmo", "cred"],
+      "keywordHints": ["payment received", "payment sent", "cashback", "refund", "autopay"]
+    }
+  }
+}

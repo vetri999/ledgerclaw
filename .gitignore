@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+
+# Environment & secrets
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# Runtime data (the ~/.ledgerclaw/ folder is separate from this repo,
+# but just in case someone copies files here during development)
+ledger.db
+token.json
+credentials.json
+auth/
