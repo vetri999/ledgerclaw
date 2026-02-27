@@ -1,4 +1,5 @@
 # 🦅 LedgerClaw
+![Logo](logo.png)
 
 Open-source, local-first personal finance intelligence agent.
 
@@ -25,7 +26,7 @@ If your laptop was off for a few days, LedgerClaw catches up automatically — y
 
 - **Node.js** 20 or later
 - **Ollama** (recommended) — [install from ollama.com](https://ollama.com)
-  - Pull a model: `ollama pull llama3.2:7b`
+  - Pull a model: `ollama pull llama3.2:3b`
 - **Google Cloud project** with Gmail API enabled (free, takes 5 minutes)
 - **WhatsApp** on your phone
 
@@ -51,7 +52,9 @@ The onboarding wizard walks you through:
 3. Connecting your Gmail (OAuth2, read-only access)
 4. Building your personalized finance filter
 5. Linking your WhatsApp (QR code scan)
-6. Generating your first briefing
+6. Sending a WhatsApp welcome test message
+
+Daily finance briefings start from the next scheduled run.
 
 After onboarding, start the scheduler:
 
