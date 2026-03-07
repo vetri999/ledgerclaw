@@ -1,0 +1,15 @@
+{
+  "name": "ledgerclaw-whatsapp",
+  "version": "0.1.0",
+  "description": "WhatsApp adapter for LedgerClaw",
+  "type": "module",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.16",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "@types/node": "^22.10.0"
+  }
+}

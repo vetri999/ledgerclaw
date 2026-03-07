@@ -1,0 +1,21 @@
+# WhatsApp Channel — Configuration
+
+name: whatsapp
+
+setup:
+  group_name: "Daily Finance Briefing"
+  qr_timeout_ms: 180000
+  required_config_fields:
+    - group_jid
+    - group_name
+
+connect:
+  timeout_ms: 30000
+
+formatting:
+  max_message_length: 1800
+  rules:
+    heading: "*{text}*"
+    sub_heading: "_{text}_"
+    bold: "*{text}*"
+    bullet: "• "

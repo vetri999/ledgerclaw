@@ -1,0 +1,21 @@
+# OS/editor artifacts
+.DS_Store
+
+# Environment / secrets
+.env
+.env.*
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Node dependencies (root + nested package folders)
+node_modules/
+output/channel/spec/whatsapp/node_modules/
+
+# Runtime/user-generated channel state (auth, config, etc.)
+output/channel/user/
+
+# Optional logs
+*.log
