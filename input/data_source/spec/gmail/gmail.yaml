@@ -1,0 +1,18 @@
+# Gmail Source — Configuration
+
+name: gmail
+
+setup:
+  required_files:
+    - credentials.json
+    - token.json
+  scopes:
+    # gmail.modify = read + mark as read + manage labels + delete
+    # covers all current and future usecases
+    - https://mail.google.com/
+
+fetch:
+  initial_fetch_days: 90
+  batch_size: 25
+  batch_delay_seconds: 1
+  max_retries: 3

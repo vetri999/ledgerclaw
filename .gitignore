@@ -1,21 +1,34 @@
 # OS/editor artifacts
 .DS_Store
+.idea/
+.vscode/
 
 # Environment / secrets
 .env
 .env.*
 .venv/
+.python-version
 
 # Python cache
 __pycache__/
 *.pyc
+.pytest_cache/
+.mypy_cache/
 
 # Node dependencies (root + nested package folders)
 node_modules/
-output/channel/spec/whatsapp/node_modules/
+npm-debug.log*
+yarn-error.log*
 
-# Runtime/user-generated channel state (auth, config, etc.)
-output/channel/user/
+# Runtime/user-generated state (auth, config, sync state, etc.)
+input/**/user/
+output/**/user/
+process/**/user/
+
+# Sensitive local credential/state files
+**/credentials*.json
+**/token*.json
+**/sync_state*.json
 
 # Optional logs
 *.log

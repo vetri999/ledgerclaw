@@ -1,0 +1,11 @@
+# Ollama Provider — Configuration (local LLM)
+
+name: ollama
+local: true
+priority: 1
+
+base_url: http://localhost:11434
+model: llama3.2:latest
+timeout_seconds: 120
+temperature: 0.3
+max_tokens: 2048

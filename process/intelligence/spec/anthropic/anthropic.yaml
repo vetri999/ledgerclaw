@@ -1,0 +1,11 @@
+# Anthropic Provider — Configuration (cloud LLM)
+
+name: anthropic
+local: false
+priority: 2
+
+model: claude-sonnet-4-5-20250514
+api_key_env: ANTHROPIC_API_KEY
+timeout_seconds: 60
+temperature: 0.3
+max_tokens: 2048
