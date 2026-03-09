@@ -1,0 +1,150 @@
+# ═══════════════════════════════════════════════════════════════
+# LedgerClaw Knowledge Network
+# ═══════════════════════════════════════════════════════════════
+#
+# Goal decomposition graph.
+# Read left → right (How → What → Why) to understand structure.
+# Read right → left (Why → What → How) to plan execution.
+#
+# Layers: task → agent → capability → pillar → objective
+#
+# To add a usecase: insert an atom, connect why (→) and how (←).
+# ═══════════════════════════════════════════════════════════════
+
+# ─── OBJECTIVE (rightmost — the ultimate goal) ───
+
+- id: best_finance
+  layer: objective
+  what: Best personal finance state
+  how: [income_mgmt, expense_mgmt, asset_mgmt, liability_mgmt]
+
+# ─── PILLARS (the four dimensions of personal finance) ───
+
+- id: income_mgmt
+  layer: pillar
+  what: Income is maximised and tracked
+  why: [best_finance]
+  how: [awareness, income_optimization]
+
+- id: expense_mgmt
+  layer: pillar
+  what: Expenses are minimised and controlled
+  why: [best_finance]
+  how: [awareness, expense_tracking, tax_optimization]
+
+- id: asset_mgmt
+  layer: pillar
+  what: Assets are grown and monitored
+  why: [best_finance]
+  how: [investment_tracking]
+  status: planned
+
+- id: liability_mgmt
+  layer: pillar
+  what: Liabilities are minimised and managed
+  why: [best_finance]
+  how: [credit_optimization]
+  status: planned
+
+# ─── CAPABILITIES (what the system can do) ───
+
+- id: awareness
+  layer: capability
+  what: User has daily visibility of financial activity
+  why: [income_mgmt, expense_mgmt]
+  how: [briefer_agent]
+
+- id: income_optimization
+  layer: capability
+  what: Income streams are optimised
+  why: [income_mgmt]
+  how: [salary_optimizer_agent]
+  status: planned
+
+- id: expense_tracking
+  layer: capability
+  what: Expenses are categorised and tracked
+  why: [expense_mgmt]
+  how: [accounting_agent]
+  status: planned
+
+- id: tax_optimization
+  layer: capability
+  what: Tax liability is minimised legally
+  why: [expense_mgmt]
+  how: [tax_agent]
+  status: planned
+
+- id: investment_tracking
+  layer: capability
+  what: Investments are monitored and rebalanced
+  why: [asset_mgmt]
+  how: [mf_recommender_agent]
+  status: planned
+
+- id: credit_optimization
+  layer: capability
+  what: Credit cards and loans are optimised
+  why: [liability_mgmt]
+  how: [credit_card_agent]
+  status: planned
+
+# ─── AGENTS (specific AI agents) ───
+
+- id: briefer_agent
+  layer: agent
+  what: Daily finance briefing from email data
+  why: [awareness]
+  how: [fetch_gmail, classify_emails, generate_briefing, send_whatsapp]
+
+- id: salary_optimizer_agent
+  layer: agent
+  what: Analyse and optimise salary structure
+  why: [income_optimization]
+  status: planned
+
+- id: accounting_agent
+  layer: agent
+  what: Categorise transactions and track spending
+  why: [expense_tracking]
+  status: planned
+
+- id: tax_agent
+  layer: agent
+  what: Calculate tax liability and suggest savings
+  why: [tax_optimization]
+  status: planned
+
+- id: mf_recommender_agent
+  layer: agent
+  what: Recommend and track mutual fund investments
+  why: [investment_tracking]
+  status: planned
+
+- id: credit_card_agent
+  layer: agent
+  what: Optimise credit card usage and payments
+  why: [credit_optimization]
+  status: planned
+
+# ─── TASKS (leftmost — directly executable steps) ───
+
+- id: fetch_gmail
+  layer: task
+  what: Fetch financial emails from Gmail
+  why: [briefer_agent]
+
+- id: classify_emails
+  layer: task
+  what: Classify emails as financial or non-financial
+  why: [briefer_agent]
+
+- id: generate_briefing
+  layer: task
+  what: Generate daily summary with actions
+  why: [briefer_agent]
+
+- id: send_whatsapp
+  layer: task
+  what: Deliver briefing via WhatsApp
+  why: [briefer_agent]

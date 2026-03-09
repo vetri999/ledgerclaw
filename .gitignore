@@ -32,3 +32,6 @@ process/**/user/
 
 # Optional logs
 *.log
+
+# Local generated artifacts
+network.html
