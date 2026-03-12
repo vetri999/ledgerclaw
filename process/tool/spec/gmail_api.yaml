@@ -1,0 +1,3 @@
+id: gmail_api
+what: Gmail API for fetching emails
+type: data_source

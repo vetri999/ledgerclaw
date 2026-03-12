@@ -1,0 +1,3 @@
+id: sqlite_store
+what: SQLite database for local data storage
+type: data_store

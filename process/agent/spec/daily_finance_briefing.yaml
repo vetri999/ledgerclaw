@@ -1,0 +1,11 @@
+id: daily_finance_briefing
+what:
+  value: Daily Finance Briefing
+why:
+  value: awareness
+how:
+  step 1: get list of senders from Gmail
+  step 2: filter only financial senders
+  step 3: send content to LLM for summarization and data storage
+  step 4: store extracted data in data store
+  step 5: send summary through Whatsapp

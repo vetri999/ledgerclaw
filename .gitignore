@@ -14,6 +14,9 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
 # Node dependencies (root + nested package folders)
 node_modules/
@@ -34,4 +37,5 @@ process/**/user/
 *.log
 
 # Local generated artifacts
-network.html
+/network.html
+/process/network.html
